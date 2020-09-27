@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+        body {
+            background-color: rgb(241, 150, 204);
+            color:whitesmoke;
+            text-align: center;
+        }
+        h1 {
+            color: rgb(255, 0, 140);
+            font-family: 'Fjalla One', sans-serif;
+        }
+        p {
+            font-size: 15pt;
+            font-family: 'Fjalla One', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1> Tratamento de dados</h1>
+    <p> Utilização de alguns métodos de strings e formatação de números</p>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.write(`Hello, <strong>${nome}</strong>. O seu nome tem ${nome.length} letras.</br>`)
+        document.write(`Seu nome em maiúsculas é <strong>${nome.toUpperCase()}.</strong></br>`)
+        document.write(`Seu nome em minúsculas é <strong>${nome.toLowerCase()}.</strong>`)
+        //Formatação de números:
+        var n1 = 1545.4
+        //Comando para que o número fique com duas casas decimais
+        n1.toFixed(2)
+        //Substitui(replace) o ponto por uma vírgula
+        n1.toFixed(2).replace('.',',')
+        //Trasforma em formato monetário em reais, dólar ou euro
+        n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})
+        n1.toLocaleString('pt-BR', {style: 'currency', currency:'USD'})
+        n1.toLocaleString('pt-BR', {style: 'currency', currency:'EUR'})
+       
+
+    </script>
+    
+</body>
+</html>

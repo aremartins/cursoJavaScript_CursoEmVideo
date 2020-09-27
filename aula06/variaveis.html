@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+        body {
+            background-color: rgb(241, 150, 204);
+            color:whitesmoke;
+            text-align: center;
+        }
+        h1 {
+            color: rgb(255, 0, 140);
+            font-family: 'Fjalla One', sans-serif;
+        }
+        p {
+            font-size: 15pt;
+            font-family: 'Fjalla One', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Utilização de variáveis, conversões de tipo e utilização de template strings</h1>
+    <p> Nesta aula aprendemos como armazenar as informações em variáveis e trabalhar com esses dados.</p>
+    <p> Também começamos a utilizar template strings nos comandos. </p>
+
+    <script>
+        var nome = window.prompt('Whats your name?');
+        window.alert("It's a great pleasure to meet you " + nome)
+        //Quando posso confiar na conversão feita pelo JS, e ele converterá e somará independente do tipo:
+        var n1 = Number(window.prompt('Type a number: '))
+        var n2 = Number(window.prompt('Type outher number:'))
+        var s = n1 + n2
+        window.alert(`The sum of ${n1} and ${n2} is ${s}`)
+        //Quando quero forçar a conversão de tipos:
+        var n3 = Number.parseInt(window.prompt('Type a number: '))
+        var n4 = parseInt(window.prompt('Type outher number: '))
+        var r = n3 + n4
+        window.alert('The sum the number is ' + r)
+        //template string:
+        var t = 'JavaScript'
+        window.alert(` ${nome}, I'm studing ${t}`)
+        
+    
+    </script>
+    
+</body>
+</html>
