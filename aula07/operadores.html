@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body {
+            background-color:salmon;
+            color:white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16pt;
+            text-align: center;
+        }
+        h1 {
+            color:rgb(238, 14, 182)
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var num1 = Number(window.prompt('Digite um número: '))
+        var num2 = Number(window.prompt('Digite outro número: '))
+        //Operações simples
+        var soma = num1 + num2;
+        var subtr = num1 - num2;
+        var mult = num1 * num2;
+        var div = num1/num2;
+        window.alert(`Soma: ${soma}/  Subtração: ${subtr}/  Multiplicação: ${mult}/  Divisão: ${div}`)
+        
+        var n = 3
+        //Manipulando a variável n para que ela passe a valer 1
+        n += 4 //soma 4 à variável n, passa a valer 7
+        n -= 5 //subtrai 5, passa a valer 2
+        n *= 4 // multiplicando por 4, n agora vale 8
+        n /= 2 // divide por 2, n valendo 4
+        n **= 2 // elevo ao quadrado e passa a valer 16
+        n %= 5 // O resto da divisão de 16/5 é 1
+
+        //Precedência de operadores:
+        var a = 5 * 2 ** 2//Executa primeiro a exponênciação e depois a multiplicação 
+        var b = 10 - a / 2//Primeiro divisão e depois subtração
+        var c = 6 * 2 / b //Mesma ordem de precedência, entao executa quem aparece primeiro
+        var d = b % c + 4/a //Primeiro operação b%c, depois 4/a e por último a soma
+
+
+
+    </script>
+    
+</body>
+</html>
