@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando a Dom</title>
+</head>
+<style>
+    body {
+        background: blue;
+        color: white;
+        font: normal 18pt Arial;
+    }
+</style>
+<body>
+    <h1>Manipulando o DOM</h1>
+    <p> Aqui vai o resultado</p>
+    <p> Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg"> Clique em mim </div>
+    <script>
+        /*=== Selecionando os elementos por marca:
+        getElementsByTagName retorna um array, para acessar 
+        um elemento específico caso tenha mais de um elemento do mesmo tipo
+        é necessário indicar a posição: ===*/
+        var p1 = window.document.getElementsByTagName('p')[1] //seleciona o segundo parágrafo
+        var corpo = window.document.body
+        window.document.write(p1.innerText) //este comando retorna o texto dentro do parágrafo
+        window.document.write(p1.innerHTML) //retorna o html completo(neste caso com a tag strong)
+        p1.style.color='red' // muda a cor do segundo parágrafo 
+        corpo.style.background = 'black'   //muda a cor do fundo 
+        
+        
+        /*=== Selecionando os elementos por ID:
+        getElementByID ===*/
+
+        var d = window.document.getElementById('msg') // cria variável para selecionar a tag por ID
+        d.style.background = 'blue' //modifica a cor de fundo da div msg
+        d.innerText = "Estou aguardando" //modifica o texto da div
+
+        /* === Da mesma forma que podemos fazer a seleção por id, 
+        funciona para class(document.getElementByClassName) ou name(document.getElementsByName("msg")[0]) ===*/
+
+        //Posso fazer um comando de uma única linha para modificar o texto:
+        //window.document.getElementById("msg").innerText = "Olá"
+
+        //Estamos usando var ao invés de const por estar no início do curso
+
+
+
+    </script>
+    
+</body>
+</html>

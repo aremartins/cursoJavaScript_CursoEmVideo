@@ -37,11 +37,24 @@
         n **= 2 // elevo ao quadrado e passa a valer 16
         n %= 5 // O resto da divisão de 16/5 é 1
 
-        //Precedência de operadores:
+        /*=== Precedência de operadores aritméticos:
+        Primeiro: ();
+        Segundo: **;
+        Terceiro(mesma ordem, executa o que aparece primeiro): /, *, %;
+        ùltimo: + e -. ===*/
+
         var a = 5 * 2 ** 2//Executa primeiro a exponênciação e depois a multiplicação 
         var b = 10 - a / 2//Primeiro divisão e depois subtração
         var c = 6 * 2 / b //Mesma ordem de precedência, entao executa quem aparece primeiro
-        var d = b % c + 4/a //Primeiro operação b%c, depois 4/a e por último a soma
+        var d = b % c + 4/a //Primeiro operação b%c pq apareceu primeiro, depois 4/a e por último a soma
+
+        
+
+        /*=== Precedência em operadores lógicos:
+        Primeiro: !;
+        Segundo: &&;
+        Terceiro: ||. ===*/
+
 
 
 
