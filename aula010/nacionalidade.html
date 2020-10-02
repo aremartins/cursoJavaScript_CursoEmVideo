@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding: 0;
+            border: 0;
+        }
+
+        
+        header {
+            background: green;
+            color: white;
+            font: 40px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: rgb(226, 226, 47);
+            color: blue;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+                                  
+        }  
+
+        body input {
+            font-size: 28px;
+            
+        }      
+    </style>
+</head>
+    <header>
+        <h1> Sistema de imigração</h1>
+    </header>
+    <body>
+        Informe o país: <input type="text" name="pais" id="pais">
+        <input type="button" value="verificar" onclick="conferir()">
+        <div id="res"></div>
+    </body>
+    <script>
+       function conferir() {
+           var txtpais = document.querySelector("input#pais")
+           var resposta = document.querySelector("div#res")
+           var origem = (txtpais.value)
+           resposta.innerHTML =`<p> O país informado foi <strong>${origem}.</strong>`
+           if(origem == "Brasil") {
+               resposta.innerHTML +=`<p> Você é brasileiro, apresente seu <strong>RG.</strong></p>`
+           } else {
+                resposta.innerHTML += `<p> Você é estrangeiro, apresente sua <sstrong>RNE.</strong><p>`
+           }
+       }
+   </script>
+
+</body>
+</html>
